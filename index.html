@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sprivaten TailwindCSS</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./build/tailwind.css" />
+    <link rel="stylesheet" href="./build/app.css" />
+  </head>
+  <body>
+    <div class="relative">
+      <!-- Form Submit Mobile -->
+      <div
+        class="formSubmitMobile fixed z-50 top-[50%] right-[-332px] translate-y-[-50%] bg-white rounded-[10px] p-10 w-[330px] dark:bg-[#0F0D58] lg:hidden transition-all"
+      >
+        <div
+          class="absolute top-[290px] left-[-115px] border-b-[40px] border-x-[20px] h-0 w-[190px] border-[#00A0C1] border-x-transparent border-solid rotate-[270deg] text-white font-medium text-center"
+          onclick="{showHiddenMenuMobile()}"
+        >
+          <span>
+            Form Submit&nbsp;
+            <ion-icon
+              name="arrow-up-outline"
+              class="iconShowHiddenMenuMobile transition-all"
+            ></ion-icon>
+          </span>
+        </div>
+        <p
+          class="text-[24px] leading-[32px] tracking-[0.1px] text-center capitalize font-bold text-[#252B42] dark:text-[#fbfbfb]"
+        >
+          Book Appointment
+        </p>
+        <!-- Input Name -->
+        <div class="mb-3 mt-10">
+          <p
+            class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
+          >
+            Name*
+          </p>
+          <input
+            type="text"
+            class="bg-[#F9F9F9] border border-[#BDBDBD] w-full rounded-[5px] px-[21px] py-[11px] placeholder:text-[14px] placeholder:leading-[28px] placeholder:tracking-[0.2px] placeholder:text-[#737373] placeholder:font-normal"
+            placeholder="Full Name"
+          />
+        </div>
+        <!-- End Input Name -->
+        <!-- Input Email -->
+        <div class="mb-3">
+          <p
+            class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
+          >
+            Email*
+          </p>
+          <input
+            type="text"
+            class="bg-[#F9F9F9] border border-[#BDBDBD] w-full rounded-[5px] px-[21px] py-[11px] placeholder:text-[14px] placeholder:leading-[28px] placeholder:tracking-[0.2px] placeholder:text-[#737373] placeholder:font-normal"
+            placeholder="example@gmail.com"
+          />
+        </div>
+        <!-- End Input Email -->
+        <!-- Pulldown Department -->
+        <div class="mb-3">
+          <p
+            class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
+          >
+            Department*
+          </p>
+          <!-- <input
+          type="text"
+          class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px]"
+          placeholder="example@gmail.com"
+        /> -->
+          <div class="relative">
+            <input
+              type="checkbox"
+              id="department"
+              name="department"
+              class="absolute opacity-0 pointer-events-none left-[-1000px] peer"
+            />
+            <label
+              for="department"
+              class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px] inline-block w-full relative"
+            >
+              <span
+                class="text-[14px] leading-[28px] tracking-[0.2px] text-[#737373] font-normal"
+                >Please Select</span
+              >
+            </label>
+            <ion-icon
+              name="arrow-down-outline"
+              class="absolute top-[50%] translate-y-[-50%] right-[6px] pointer-events-none transition-all peer-checked:rotate-180"
+            ></ion-icon>
+            <div
+              class="absolute z-10 bg-[#F9F9F9] pointer-events-none opacity-0 w-full top-[110%] rounded-md transition-all peer-checked:opacity-100 peer-checked:pointer-events-auto"
+            >
+              <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                <a href="#">Option A</a>
+              </div>
+              <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                <a href="#">Option B</a>
+              </div>
+              <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                <a href="#">Option C</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Pulldown Department -->
+        <!-- Pulldown Time -->
+        <div class="mb-10">
+          <p
+            class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
+          >
+            Time*
+          </p>
+          <!-- <input
+            type="text"
+            class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px]"
+            placeholder="example@gmail.com"
+          /> -->
+          <div class="relative">
+            <input
+              type="checkbox"
+              id="time"
+              name="time"
+              class="absolute z-10 opacity-0 pointer-events-none left-[-1000px] peer"
+            />
+            <label
+              for="time"
+              class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px] inline-block w-full relative"
+            >
+              <span
+                class="text-[14px] leading-[28px] tracking-[0.2px] text-[#737373] font-normal"
+                >4:00 Available</span
+              >
+            </label>
+            <ion-icon
+              name="arrow-down-outline"
+              class="absolute top-[50%] translate-y-[-50%] right-[6px] pointer-events-none transition-all peer-checked:rotate-180"
+            ></ion-icon>
+            <div
+              class="absolute bg-[#F9F9F9] pointer-events-none opacity-0 w-full top-[110%] rounded-md transition-all peer-checked:opacity-100 peer-checked:pointer-events-auto"
+            >
+              <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                <a href="#">Option A</a>
+              </div>
+              <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                <a href="#">Option B</a>
+              </div>
+              <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                <a href="#">Option C</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Pulldown Time -->
+        <button
+          class="bg-[#FFA62B] px-[52px] py-[15px] rounded-[5px] text-[14px] leading-[28px] tracking-[0.2px] capitalize font-bold text-white"
+        >
+          Book Appointment
+        </button>
+      </div>
+      <!-- End Form Submit Mobile -->
+      <!-- Header -->
+      <div class="header fixed z-50 w-full py-6 sm:py-8 lg:py-9 transition-all">
+        <div
+          class="flex items-center justify-between px-[22px] lg:justify-start lg:pl-[195px] lg:pr-[95px]"
+        >
+          <div
+            class="hamburger-iconMobile lg:hidden"
+            onclick="{showMenuMobileWithHamburger()}"
+          >
+            <ion-icon
+              name="menu-outline"
+              class="w-7 h-7 md:w-9 md:h-9 dark:text-[#fbfbfb]"
+            ></ion-icon>
+          </div>
+          <h1
+            class="text-[30px] leading-[36px] md:text-[40px] md:leading-[45px] font-black tracking-[0.1px] text-[#252B42] dark:text-[#fbfbfb] lg:text-[24px] lg:leading-[32px] lg:font-bold"
+          >
+            Sprivaten
+          </h1>
+          <div class="hidden lg:flex-grow lg:block"></div>
+          <div
+            class="header-menuMobile absolute z-50 bg-white dark:bg-[#252B42] right-full h-[100vh] w-full top-0 py-16 px-4 transition-all lg:flex lg:items-center lg:static lg:h-auto lg:w-auto lg:bg-transparent lg:py-0 lg:px-0"
+          >
+            <div
+              class="header-iconCloseMobile absolute right-[4%] top-[2%] lg:hidden"
+              onclick="{hiddenMenuMobileWithClose()}"
+            >
+              <ion-icon
+                name="close-circle-outline"
+                class="w-8 h-8 dark:text-[#fbfbfb]"
+              ></ion-icon>
+            </div>
+            <div class="lg:hidden relative mb-5">
+              <input
+                type="text"
+                class="w-full h-9 px-3 border border-black rounded-lg"
+              />
+              <ion-icon
+                name="search-outline"
+                class="absolute right-[12px] top-[50%] translate-y-[-50%] w-6 h-6 cursor-pointer"
+              ></ion-icon>
+            </div>
+            <p
+              class="text-[18px] leading-[30px] font-semibold tracking-[0.2px] text-[#737373] capitalize mb-3 dark:text-[#fbfbfb] lg:text-[14px] lg:leading-[24px] lg:mr-[21px] lg:font-normal"
+            >
+              Home
+            </p>
+            <p
+              class="text-[18px] leading-[30px] font-semibold tracking-[0.2px] text-[#737373] capitalize mb-3 dark:text-[#fbfbfb] lg:text-[14px] lg:leading-[24px] lg:mr-[21px] lg:font-normal"
+            >
+              product
+            </p>
+            <p
+              class="text-[18px] leading-[30px] font-semibold tracking-[0.2px] text-[#737373] capitalize mb-3 dark:text-[#fbfbfb] lg:text-[14px] lg:leading-[24px] lg:mr-[21px] lg:font-normal"
+            >
+              Pricing
+            </p>
+            <p
+              class="text-[18px] leading-[30px] font-semibold tracking-[0.2px] text-[#737373] capitalize mb-3 mr-[39px] dark:text-[#fbfbfb] lg:text-[14px] lg:leading-[24px] lg:font-normal"
+            >
+              Contact
+            </p>
+            <div
+              class="header-inputSearch-wrap hidden lg:flex lg:items-center lg:relative"
+              onclick="{showInputSearch()}"
+            >
+              <ion-icon
+                name="search-outline"
+                class="mr-[18px] w-5 h-5 dark:text-[#fbfbfb] cursor-pointer"
+              ></ion-icon>
+              <input
+                type="text"
+                class="header-inputSearch transition-all absolute top-[150%] right-[-70%] rounded-md h-8 px-3 opacity-0 pointer-events-none"
+              />
+            </div>
+            <ion-icon
+              name="cart-outline"
+              class="w-6 h-[22px] lg:w-4 lg:h-[15px] dark:text-[#fbfbfb]"
+            ></ion-icon>
+          </div>
+          <div class="relative">
+            <input
+              type="checkbox"
+              id="iconSwitch"
+              name="iconSwitch"
+              class="header-iconSwitch absolute left-[-10000px] pointer-events-none opacity-0"
+            />
+            <label for="iconSwitch">
+              <ion-icon
+                class="w-6 h-6 lg:ml-[140px] icon-iconSwitch dark:text-[#fbfbfb]"
+              ></ion-icon>
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- End header -->
+      <!-- Banner -->
+      <div class="banner h-[100vh] relative transition-all">
+        <img
+          src="./assets/images/background.png"
+          class="object-cover h-full w-full transition-all dark:opacity-0 dark:pointer-events-none dark:hidden"
+        />
+        <img
+          src="./assets/images/background-night.jpeg"
+          class="object-cover h-full w-full hidden opacity-0 transition-all pointer-events-none dark:block dark:opacity-100 dark:pointer-events-auto"
+        />
+        <div
+          class="absolute flex flex-wrap items-center justify-between w-full top-[53%] translate-y-[-50%] px-[36px] md:px-[100px] lg:px-[195px]"
+        >
+          <div class="lg:pr-[120px] flex-1">
+            <h2
+              class="text-[30px] leading-[40px] md:text-[44px] md:leading-[60px] lg:text-[58px] lg:leading-[80px] font-extrabold tracking-[0.2px] text-[#252B42] mb-[15px] md:mb-[20px] lg:mb-[35px] dark:text-[#fbfbfb]"
+            >
+              Drive More<br />Customers<br />Through Digital
+            </h2>
+            <p
+              class="text-[16px] leading-[24px] md:text-[20px] md:leading-[30px] font-medium tracking-[0.2px] text-[#737373] mb-[22px] md:mb-[35px] dark:text-[#f7f7f7]"
+            >
+              We know how large objects will act, but things on a small scale.
+            </p>
+            <div class="block md:flex items-center">
+              <button
+                class="bg-[#00A0C1] px-[36px] py-[10px] rounded-[37px] text-[14px] leading-[28px] font-bold tracking-[0.2px] text-white capitalize mr-[10px] mb-3 md:mb-0 w-full md:w-auto dark:bg-[#0F0D58] transition-all hover:opacity-60"
+              >
+                Get Quote Now
+              </button>
+              <button
+                class="px-[36px] py-[10px] rounded-[37px] border border-[#00A0C1] text-[14px] leading-[28px] font-bold tracking-[0.2px] text-[#00A0C1] capitalize w-full md:w-auto dark:border-[#0F0D58] dark:text-[#fbfbfb] dark:hover:bg-[#0F0D58] transition-all hover:bg-[#f6f6f6]"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div
+            class="hidden lg:block bg-white rounded-[10px] p-10 basis-[330px] dark:bg-[#0F0D58]"
+          >
+            <p
+              class="text-[24px] leading-[32px] tracking-[0.1px] text-center capitalize font-bold text-[#252B42] dark:text-[#fbfbfb]"
+            >
+              Book Appointment
+            </p>
+            <!-- Input Name -->
+            <div class="mb-3 mt-10">
+              <p
+                class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
+              >
+                Name*
+              </p>
+              <input
+                type="text"
+                class="bg-[#F9F9F9] border border-[#BDBDBD] w-full rounded-[5px] px-[21px] py-[11px] placeholder:text-[14px] placeholder:leading-[28px] placeholder:tracking-[0.2px] placeholder:text-[#737373] placeholder:font-normal"
+                placeholder="Full Name"
+              />
+            </div>
+            <!-- End Input Name -->
+            <!-- Input Email -->
+            <div class="mb-3">
+              <p
+                class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
+              >
+                Email*
+              </p>
+              <input
+                type="text"
+                class="bg-[#F9F9F9] border border-[#BDBDBD] w-full rounded-[5px] px-[21px] py-[11px] placeholder:text-[14px] placeholder:leading-[28px] placeholder:tracking-[0.2px] placeholder:text-[#737373] placeholder:font-normal"
+                placeholder="example@gmail.com"
+              />
+            </div>
+            <!-- End Input Email -->
+            <!-- Pulldown Department -->
+            <div class="mb-3">
+              <p
+                class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
+              >
+                Department*
+              </p>
+              <!-- <input
+                type="text"
+                class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px]"
+                placeholder="example@gmail.com"
+              /> -->
+              <div class="relative">
+                <input
+                  type="checkbox"
+                  id="department"
+                  name="department"
+                  class="absolute opacity-0 pointer-events-none left-[-1000px] peer"
+                />
+                <label
+                  for="department"
+                  class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px] inline-block w-full relative"
+                >
+                  <span
+                    class="text-[14px] leading-[28px] tracking-[0.2px] text-[#737373] font-normal"
+                    >Please Select</span
+                  >
+                </label>
+                <ion-icon
+                  name="arrow-down-outline"
+                  class="absolute top-[50%] translate-y-[-50%] right-[6px] pointer-events-none transition-all peer-checked:rotate-180"
+                ></ion-icon>
+                <div
+                  class="absolute z-10 bg-[#F9F9F9] pointer-events-none opacity-0 w-full top-[110%] rounded-md transition-all peer-checked:opacity-100 peer-checked:pointer-events-auto"
+                >
+                  <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                    <a href="#">Option A</a>
+                  </div>
+                  <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                    <a href="#">Option B</a>
+                  </div>
+                  <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                    <a href="#">Option C</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Pulldown Department -->
+            <!-- Pulldown Time -->
+            <div class="mb-10">
+              <p
+                class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
+              >
+                Time*
+              </p>
+              <!-- <input
+                  type="text"
+                  class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px]"
+                  placeholder="example@gmail.com"
+                /> -->
+              <div class="relative">
+                <input
+                  type="checkbox"
+                  id="time"
+                  name="time"
+                  class="absolute z-10 opacity-0 pointer-events-none left-[-1000px] peer"
+                />
+                <label
+                  for="time"
+                  class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px] inline-block w-full relative"
+                >
+                  <span
+                    class="text-[14px] leading-[28px] tracking-[0.2px] text-[#737373] font-normal"
+                    >4:00 Available</span
+                  >
+                </label>
+                <ion-icon
+                  name="arrow-down-outline"
+                  class="absolute top-[50%] translate-y-[-50%] right-[6px] pointer-events-none transition-all peer-checked:rotate-180"
+                ></ion-icon>
+                <div
+                  class="absolute bg-[#F9F9F9] pointer-events-none opacity-0 w-full top-[110%] rounded-md transition-all peer-checked:opacity-100 peer-checked:pointer-events-auto"
+                >
+                  <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                    <a href="#">Option A</a>
+                  </div>
+                  <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                    <a href="#">Option B</a>
+                  </div>
+                  <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
+                    <a href="#">Option C</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Pulldown Time -->
+            <button
+              class="bg-[#FFA62B] px-[52px] py-[15px] rounded-[5px] text-[14px] leading-[28px] tracking-[0.2px] capitalize font-bold text-white"
+            >
+              Book Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End Banner -->
+      <!-- Why Choose Us -->
+      <div
+        class="px-[45px] py-[36px] lg:px-[197px] lg:py-[80px] dark:bg-[#292929]"
+      >
+        <h2
+          class="text-[28px] leading-[36px] lg:text-[40px] lg:leading-[57px] tracking-[0.2px] font-bold text-[#252B42] uppercase text-center mb-[15px] lg:mb-[30px] dark:text-[#fbfbfb]"
+        >
+          Why choose us
+        </h2>
+        <p
+          class="text-[14px] leading-5 tracking-[0.2px] font-medium text-[#737373] text-center"
+        >
+          Problems trying to resolve the conflict between<br />the two major
+          realms of Classical physics: Newtonian mechanics
+        </p>
+        <div class="flex flex-wrap sm:mx-[-10px] lg:mx-[-15px] mt-10 lg:mt-20">
+          <div
+            class="rounded-[10px] flex-shrink-0 basis-full sm:basis-6/12 lg:basis-4/12 sm:px-[10px] lg:px-[15px]"
+          >
+            <div class="bg-[#D9EDFF] rounded-[10px] dark:bg-[#076665]">
+              <div class="flex items-center p-[15px] lg:p-[30px]">
+                <div
+                  class="flex items-center justify-center bg-white rounded-full h-[50px] w-[50px] lg:h-[72px] lg:w-[72px] dark:bg-black"
+                >
+                  <ion-icon
+                    name="people-outline"
+                    class="text-[#FFA62B] min-w-[25px] h-[25px] lg:min-w-[36px] lg:h-[36px]"
+                  ></ion-icon>
+                </div>
+                <p
+                  class="text-[16px] leading-[24px] tractking-[0.1px] font-bold text-[#252B42] capitalize pl-[15px]"
+                >
+                  Web Development
+                </p>
+              </div>
+              <div
+                class="border border-[#A9D6FF] rounded-[11px] bg-white py-[20px] px-[30px] lg:py-[30px] lg:px-[50px] dark:bg-black dark:border-[#076665]"
+              >
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - The best products start with Figma
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Design with real data
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Lightning fast prototyping
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Fastest way to organize
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Work at the speed of thought.
+                </p>
+                <a
+                  href="#"
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold capitalize text-[#FFA62B]"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-[10px] flex-shrink-0 basis-full mt-[20px] sm:mt-0 sm:basis-6/12 lg:basis-4/12 sm:px-[10px] lg:px-[15px]"
+          >
+            <div class="bg-[#D9EDFF] rounded-[10px] dark:bg-[#076665]">
+              <div class="flex items-center p-[15px] lg:p-[30px]">
+                <div
+                  class="flex items-center justify-center bg-white rounded-full h-[50px] w-[50px] lg:h-[72px] lg:w-[72px] dark:bg-black"
+                >
+                  <ion-icon
+                    name="medal-outline"
+                    class="text-[#FFA62B] min-w-[25px] h-[25px] lg:min-w-[36px] lg:h-[36px]"
+                  ></ion-icon>
+                </div>
+                <p
+                  class="text-[16px] leading-[24px] tractking-[0.1px] font-bold text-[#252B42] capitalize pl-[15px]"
+                >
+                  National top 50 firms
+                </p>
+              </div>
+              <div
+                class="border border-[#A9D6FF] rounded-[11px] bg-white py-[20px] px-[30px] lg:py-[30px] lg:px-[50px] dark:bg-black dark:border-[#076665]"
+              >
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - The best products start with Figma
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Design with real data
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Lightning fast prototyping
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Fastest way to organize
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Work at the speed of thought.
+                </p>
+                <a
+                  href="#"
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold capitalize text-[#FFA62B]"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="rounded-[10px] flex-shrink-0 basis-full sm:basis-6/12 mt-[20px] lg:mt-0 lg:basis-4/12 sm:px-[10px] lg:px-[15px]"
+          >
+            <div class="bg-[#D9EDFF] rounded-[10px] dark:bg-[#076665]">
+              <div class="flex items-center p-[15px] lg:p-[30px]">
+                <div
+                  class="flex items-center justify-center bg-white rounded-full h-[50px] w-[50px] lg:h-[72px] lg:w-[72px] dark:bg-black"
+                >
+                  <ion-icon
+                    name="book-outline"
+                    class="text-[#FFA62B] min-w-[25px] h-[25px] lg:min-w-[36px] lg:h-[36px]"
+                  ></ion-icon>
+                </div>
+                <p
+                  class="text-[16px] leading-[24px] tractking-[0.1px] font-bold text-[#252B42] capitalize pl-[15px]"
+                >
+                  Digital Marketing
+                </p>
+              </div>
+              <div
+                class="border border-[#A9D6FF] rounded-[11px] bg-white py-[20px] px-[30px] lg:py-[30px] lg:px-[50px] dark:bg-black dark:border-[#076665]"
+              >
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - The best products start with Figma
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Design with real data
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Lightning fast prototyping
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Fastest way to organize
+                </p>
+                <p
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#737373] mb-[5px]"
+                >
+                  - Work at the speed of thought.
+                </p>
+                <a
+                  href="#"
+                  class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold capitalize text-[#FFA62B]"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Why Choose Us -->
+      <!-- Business Service -->
+      <div>
+        <div
+          class="h-[220px] sm:h-[250px] lg:h-[409px] w-full bg-[#FAFAFA] dark:bg-[#121212]"
+        >
+          <h2
+            class="text-[28px] leading-[36px] lg:text-[40px] lg:leading-[57px] tracking-[0.2px] font-bold text-[#252B42] text-center mb-[10px] pt-[30px] sm:pt-[50px] lg:pt-[80px] dark:text-[#fbfbfb]"
+          >
+            We are providing best<br />business service.
+          </h2>
+          <p
+            class="text-[14px] leading-[20px] tracking-[0.2px] font-medium text-[#737373] text-center"
+          >
+            Problems trying to resolve the conflict between<br />the two major
+            realms of Classical physics: Newtonian mechanics
+          </p>
+        </div>
+        <div
+          class="lg:h-[407px] w-full bg-[#16697A] relative dark:bg-[#0B363D]"
+        >
+          <div
+            class="relative lg:absolute top-[-21%] left-[50%] translate-x-[-50%] w-full lg:w-[877px] h-auto"
+          >
+            <div class="relative">
+              <img src="./assets/images/media-bg-cover.png" alt="" />
+              <div
+                class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex items-center justify-center h-[90px] w-[90px] bg-[#00A0C1] rounded-full"
+              >
+                <ion-icon
+                  name="caret-forward-outline"
+                  class="text-white w-[40px] h-[40px]"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Business service -->
+      <!-- Contact Us -->
+      <div
+        class="flex flex-wrap items-center justify-between w-full bg-[#FAFAFA] py-[20px] px-[30px] sm:py-[30px] sm:px-[80px] lg:py-[40px] lg:px-[195px] dark:bg-[#292929]"
+      >
+        <div>
+          <p
+            class="text-[22px] leading-[24px] lg:text-[24px] lg:leading-[32px] tracking-[0.1px] font-bold capitalize text-[#252B42] mb-[10px] dark:text-[#FAFAFA]"
+          >
+            Consulting Agency For Your Business
+          </p>
+          <p
+            class="mb-3 sm:mb-0 text-[14px] leading-[20px] tracking-[0.2px] font-medium text-[#737373]"
+          >
+            the quick fox jumps over the lazy dog
+          </p>
+        </div>
+        <button
+          class="bg-[#FFA62B] rounded-[5px] py-[12px] px-[20px] lg:py-[15px] lg:px-[40px] text-[12px] leading-[20px] lg:text-[14px] lg:leading-[28px] tracking-[0.2px] font-bold capitalize text-white w-full sm:w-auto"
+        >
+          Contact Us
+        </button>
+      </div>
+      <!-- End Contact Us -->
+      <!-- Footer -->
+      <div>
+        <div
+          class="bg-[#252B42] p-[30px] sm:px-[80px] sm:py-[40px] lg:px-[195px]"
+        >
+          <div
+            class="flex items-center mt-0 lg:mt-[13px] mb-[24px] sm:mb-[40px] lg:mb-[57px]"
+          >
+            <h2
+              class="text-[24px] leading-[32px] tracking-[0.1px] text-white capitalize font-bold"
+            >
+              Sprivaten
+            </h2>
+            <div class="flex-grow"></div>
+            <ion-icon
+              name="logo-facebook"
+              class="w-[24px] h-[24px] text-[#335BF5] mr-5"
+            ></ion-icon>
+            <ion-icon
+              name="logo-instagram"
+              class="w-[24px] h-[24px] text-[#FFA62B] mr-5"
+            ></ion-icon>
+            <ion-icon
+              name="logo-youtube"
+              class="w-[24px] h-[24px] text-[#E42F08]"
+            ></ion-icon>
+          </div>
+          <div class="h-[1px] bg-[#364067]"></div>
+          <div
+            class="flex flex-wrap mt-[25px] sm:mt-[40px] lg:mt-[70px] justify-between"
+          >
+            <div class="basis-6/12 sm:basis-auto">
+              <h4
+                class="text-[16px] leading-[24px] tracking-[0.1px] font-bold text-white capitalize mb-[10px] sm:mb-[20px]"
+              >
+                Company Info
+              </h4>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                About Us
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                Carrier
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                We are hiring
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize"
+              >
+                Blog
+              </p>
+            </div>
+            <div class="basis-6/12 sm:basis-auto">
+              <h4
+                class="text-[16px] leading-[24px] tracking-[0.1px] font-bold text-white capitalize mb-[10px] sm:mb-[20px]"
+              >
+                Legal
+              </h4>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                About Us
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                Carrier
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                We are hiring
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize"
+              >
+                Blog
+              </p>
+            </div>
+            <div class="basis-6/12 sm:basis-auto mt-[25px] sm:mt-0">
+              <h4
+                class="text-[16px] leading-[24px] tracking-[0.1px] font-bold text-white capitalize mb-[10px] sm:mb-[20px]"
+              >
+                Features
+              </h4>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                Business Marketing
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                User Analytic
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                Live Chat
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize"
+              >
+                Unlimited Support
+              </p>
+            </div>
+            <div class="basis-6/12 sm:basis-auto mt-[25px] sm:mt-0">
+              <h4
+                class="text-[16px] leading-[24px] tracking-[0.1px] font-bold text-white capitalize mb-[10px] sm:mb-[20px]"
+              >
+                Resources
+              </h4>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                IOS & Android
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                Watch a Demo
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize mb-[5px] sm:mb-[10px]"
+              >
+                Customers
+              </p>
+              <p
+                class="text-[14px] leading-[24px] tracking-[0.2px] font-semibold text-[#BDBDBD] capitalize"
+              >
+                API
+              </p>
+            </div>
+            <div class="basis-full lg:basis-auto">
+              <h4
+                class="text-[16px] leading-[24px] tracking-[0.1px] font-bold text-white capitalize mb-[10px] sm:mb-[20px] mt-[25px] lg:mt-0"
+              >
+                Get In Touch
+              </h4>
+              <div class="flex border border-[#F9F9F9] rounded-[5px]">
+                <input
+                  type="text"
+                  class="block py-[15px] px-[20px] text-[14px] leading-[28px] tracking-[0.2px] text-[#BDBDBD] bg-[#F9F9F9] w-full"
+                  placeholder="Your Email"
+                />
+                <button
+                  class="block bg-[#FFA62B] py-[15px] px-[22px] text-[14px] leading-[28px] tracking-[0.2px] font-normal text-white"
+                >
+                  Subscribe
+                </button>
+              </div>
+              <p
+                class="text-[12px] leading-[28px] tracking-[0.2px] font-semibold text-[#BDBDBD]"
+              >
+                Lorem impsum dolor amit
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-[#16697A] py-[15px] px-[30px] sm:py-[22px] sm:px-[80px] lg:py-[25px] lg:px-[195px]"
+        >
+          <p
+            class="text-[10px] leading-[16px] sm:text-[14px] sm:leading-[24px] tracking-[0.2px] font-semibold text-white capitalize"
+          >
+            Made With Love By Figmaland All Right Reserved
+          </p>
+        </div>
+      </div>
+      <!-- End Footer -->
+    </div>
+    <script>
+      var scrollTriggerHeader = 50;
+      window.onscroll = function () {
+        if (window.pageYOffset >= scrollTriggerHeader) {
+          if (
+            localStorage.getItem("theme") &&
+            localStorage.getItem("theme") === "dark"
+          ) {
+            document
+              .querySelector(".header")
+              .classList.add("bg-black", "shadow");
+          } else {
+            document
+              .querySelector(".header")
+              .classList.add("bg-white", "shadow");
+          }
+        } else {
+          if (
+            localStorage.getItem("theme") &&
+            localStorage.getItem("theme") === "dark"
+          ) {
+            document
+              .querySelector(".header")
+              .classList.remove("bg-black", "shadow");
+          } else {
+            document
+              .querySelector(".header")
+              .classList.remove("bg-white", "shadow");
+          }
+        }
+      };
+    </script>
+    <script>
+      var isOpenMenuMobile = false;
+      function showHiddenMenuMobile() {
+        isOpenMenuMobile = !isOpenMenuMobile;
+        if (isOpenMenuMobile === true) {
+          const menuMobileItem = document.querySelector(".formSubmitMobile");
+          const iconShowHiddenMenuMobile = document.querySelector(
+            ".iconShowHiddenMenuMobile"
+          );
+          menuMobileItem.classList.remove("right-[-332px]");
+          menuMobileItem.classList.add("right-0");
+          iconShowHiddenMenuMobile.classList.add("rotate-180");
+        } else {
+          const menuMobileItem = document.querySelector(".formSubmitMobile");
+          const iconShowHiddenMenuMobile = document.querySelector(
+            ".iconShowHiddenMenuMobile"
+          );
+          menuMobileItem.classList.remove("right-0");
+          menuMobileItem.classList.add("right-[-332px]");
+          iconShowHiddenMenuMobile.classList.remove("rotate-180");
+        }
+      }
+    </script>
+    <script>
+      function showMenuMobileWithHamburger() {
+        const headerMenuMobileItem =
+          document.querySelector(".header-menuMobile");
+        headerMenuMobileItem.classList.remove("right-full");
+        headerMenuMobileItem.classList.add("right-0");
+      }
+      function hiddenMenuMobileWithClose() {
+        const headerMenuMobileItem =
+          document.querySelector(".header-menuMobile");
+        headerMenuMobileItem.classList.remove("right-0");
+        headerMenuMobileItem.classList.add("right-full");
+      }
+    </script>
+    <script>
+      function showInputSearch() {
+        window.addEventListener("click", function (e) {
+          if (
+            document
+              .querySelector(".header-inputSearch-wrap")
+              .contains(e.target)
+          ) {
+            console.log("1");
+            document
+              .querySelector(".header-inputSearch")
+              .classList.add("opacity-100", "pointer-events-auto");
+          } else {
+            console.log("2");
+            document
+              .querySelector(".header-inputSearch")
+              .classList.remove("opacity-100", "pointer-events-auto");
+          }
+        });
+      }
+    </script>
+    <script>
+      const toggleSwitch = document.querySelector(".header-iconSwitch");
+      const currentTheme = localStorage.getItem("theme");
+      const iconSwitch = document.querySelector(".icon-iconSwitch");
+      iconSwitch.setAttribute("name", "partly-sunny-outline");
+      if (currentTheme) {
+        document.documentElement.setAttribute("class", currentTheme);
+        if (currentTheme === "dark" && toggleSwitch) {
+          toggleSwitch.checked = true;
+          iconSwitch.setAttribute("name", "moon-outline");
+        }
+      }
+      function switchTheme(e) {
+        if (e.target.checked) {
+          document.documentElement.setAttribute("class", "dark");
+          iconSwitch.setAttribute("name", "moon-outline");
+          localStorage.setItem("theme", "dark");
+          if (window.pageYOffset >= scrollTriggerHeader) {
+            document.querySelector(".header").classList.remove("bg-white");
+            document.querySelector(".header").classList.add("bg-black");
+          }
+        } else {
+          document.documentElement.setAttribute("class", "light");
+          iconSwitch.setAttribute("name", "partly-sunny-outline");
+          localStorage.setItem("theme", "light");
+          if (window.pageYOffset >= scrollTriggerHeader) {
+            document.querySelector(".header").classList.remove("bg-black");
+            document.querySelector(".header").classList.add("bg-white");
+          }
+        }
+      }
+      toggleSwitch.addEventListener("change", switchTheme);
+    </script>
+  </body>
+</html>
