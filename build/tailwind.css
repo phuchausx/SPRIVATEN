@@ -721,6 +721,10 @@ html,
   z-index: 10;
 }
 
+.z-\[51\] {
+  z-index: 51;
+}
+
 .float-right {
   float: right;
 }
