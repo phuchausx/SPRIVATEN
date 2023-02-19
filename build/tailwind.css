@@ -697,6 +697,10 @@ html,
   right: 0px;
 }
 
+.left-\[-114px\] {
+  left: -114px;
+}
+
 .isolate {
   isolation: isolate;
 }
