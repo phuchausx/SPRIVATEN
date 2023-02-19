@@ -40,46 +40,30 @@
             ></ion-icon>
           </span>
         </div>
-        <p
-          class="text-[24px] leading-[32px] tracking-[0.1px] text-center capitalize font-bold text-[#252B42] dark:text-[#fbfbfb]"
-        >
-          Book Appointment
-        </p>
-        <!-- Input Name -->
+        <p class="bookAppointmentStyle">Book Appointment</p>
+        <!-- Input Name Mobile -->
         <div class="mb-3 mt-10">
-          <p
-            class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
-          >
-            Name*
-          </p>
+          <p class="formTitleFieldStyle">Name*</p>
           <input
             type="text"
-            class="bg-[#F9F9F9] border border-[#BDBDBD] w-full rounded-[5px] px-[21px] py-[11px] placeholder:text-[14px] placeholder:leading-[28px] placeholder:tracking-[0.2px] placeholder:text-[#737373] placeholder:font-normal"
+            class="formInputFieldStyle"
             placeholder="Full Name"
           />
         </div>
-        <!-- End Input Name -->
-        <!-- Input Email -->
+        <!-- End Input Name Mobile -->
+        <!-- Input Email Mobile -->
         <div class="mb-3">
-          <p
-            class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
-          >
-            Email*
-          </p>
+          <p class="formTitleFieldStyle">Email*</p>
           <input
             type="text"
-            class="bg-[#F9F9F9] border border-[#BDBDBD] w-full rounded-[5px] px-[21px] py-[11px] placeholder:text-[14px] placeholder:leading-[28px] placeholder:tracking-[0.2px] placeholder:text-[#737373] placeholder:font-normal"
+            class="formInputFieldStyle"
             placeholder="example@gmail.com"
           />
         </div>
-        <!-- End Input Email -->
-        <!-- Pulldown Department -->
+        <!-- End Input Email Mobile -->
+        <!-- Pulldown Department Mobile -->
         <div class="mb-3">
-          <p
-            class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
-          >
-            Department*
-          </p>
+          <p class="formTitleFieldStyle">Department*</p>
           <!-- <input
           type="text"
           class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px]"
@@ -88,14 +72,11 @@
           <div class="relative">
             <input
               type="checkbox"
-              id="department"
-              name="department"
-              class="absolute opacity-0 pointer-events-none left-[-1000px] peer"
+              id="departmentMobile"
+              name="departmentMobile"
+              class="formCheckboxStyle peer"
             />
-            <label
-              for="department"
-              class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px] inline-block w-full relative"
-            >
+            <label for="departmentMobile" class="formLabelCheckboxStyle">
               <span
                 class="text-[14px] leading-[28px] tracking-[0.2px] text-[#737373] font-normal"
                 >Please Select</span
@@ -103,10 +84,10 @@
             </label>
             <ion-icon
               name="arrow-down-outline"
-              class="absolute top-[50%] translate-y-[-50%] right-[6px] pointer-events-none transition-all peer-checked:rotate-180"
+              class="formIconCheckboxStyle peer-checked:rotate-180"
             ></ion-icon>
             <div
-              class="absolute z-10 bg-[#F9F9F9] pointer-events-none opacity-0 w-full top-[110%] rounded-md transition-all peer-checked:opacity-100 peer-checked:pointer-events-auto"
+              class="formWrapOptionDropdownStyle z-10 peer-checked:opacity-100 peer-checked:pointer-events-auto"
             >
               <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
                 <a href="#">Option A</a>
@@ -120,14 +101,10 @@
             </div>
           </div>
         </div>
-        <!-- End Pulldown Department -->
-        <!-- Pulldown Time -->
+        <!-- End Pulldown Department Mobile -->
+        <!-- Pulldown Time Mobile -->
         <div class="mb-10">
-          <p
-            class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
-          >
-            Time*
-          </p>
+          <p class="formTitleFieldStyle">Time*</p>
           <!-- <input
             type="text"
             class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px]"
@@ -136,14 +113,11 @@
           <div class="relative">
             <input
               type="checkbox"
-              id="time"
-              name="time"
+              id="timeMobile"
+              name="timeMobile"
               class="absolute z-10 opacity-0 pointer-events-none left-[-1000px] peer"
             />
-            <label
-              for="time"
-              class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px] inline-block w-full relative"
-            >
+            <label for="timeMobile" class="formLabelCheckboxStyle">
               <span
                 class="text-[14px] leading-[28px] tracking-[0.2px] text-[#737373] font-normal"
                 >4:00 Available</span
@@ -151,10 +125,10 @@
             </label>
             <ion-icon
               name="arrow-down-outline"
-              class="absolute top-[50%] translate-y-[-50%] right-[6px] pointer-events-none transition-all peer-checked:rotate-180"
+              class="formIconCheckboxStyle peer-checked:rotate-180"
             ></ion-icon>
             <div
-              class="absolute bg-[#F9F9F9] pointer-events-none opacity-0 w-full top-[110%] rounded-md transition-all peer-checked:opacity-100 peer-checked:pointer-events-auto"
+              class="formWrapOptionDropdownStyle peer-checked:opacity-100 peer-checked:pointer-events-auto"
             >
               <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
                 <a href="#">Option A</a>
@@ -168,7 +142,7 @@
             </div>
           </div>
         </div>
-        <!-- End Pulldown Time -->
+        <!-- End Pulldown Time Mobile -->
         <button
           class="bg-[#FFA62B] px-[52px] py-[15px] rounded-[5px] text-[14px] leading-[28px] tracking-[0.2px] capitalize font-bold text-white"
         >
@@ -312,46 +286,30 @@
           <div
             class="hidden lg:block bg-white rounded-[10px] p-10 basis-[330px] dark:bg-[#0F0D58]"
           >
-            <p
-              class="text-[24px] leading-[32px] tracking-[0.1px] text-center capitalize font-bold text-[#252B42] dark:text-[#fbfbfb]"
-            >
-              Book Appointment
-            </p>
+            <p class="formBookAppointmentStyle">Book Appointment</p>
             <!-- Input Name -->
             <div class="mb-3 mt-10">
-              <p
-                class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
-              >
-                Name*
-              </p>
+              <p class="formTitleFieldStyle">Name*</p>
               <input
                 type="text"
-                class="bg-[#F9F9F9] border border-[#BDBDBD] w-full rounded-[5px] px-[21px] py-[11px] placeholder:text-[14px] placeholder:leading-[28px] placeholder:tracking-[0.2px] placeholder:text-[#737373] placeholder:font-normal"
+                class="formInputFieldStyle"
                 placeholder="Full Name"
               />
             </div>
             <!-- End Input Name -->
             <!-- Input Email -->
             <div class="mb-3">
-              <p
-                class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
-              >
-                Email*
-              </p>
+              <p class="formTitleFieldStyle">Email*</p>
               <input
                 type="text"
-                class="bg-[#F9F9F9] border border-[#BDBDBD] w-full rounded-[5px] px-[21px] py-[11px] placeholder:text-[14px] placeholder:leading-[28px] placeholder:tracking-[0.2px] placeholder:text-[#737373] placeholder:font-normal"
+                class="formInputFieldStyle"
                 placeholder="example@gmail.com"
               />
             </div>
             <!-- End Input Email -->
             <!-- Pulldown Department -->
             <div class="mb-3">
-              <p
-                class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
-              >
-                Department*
-              </p>
+              <p class="formTitleFieldStyle">Department*</p>
               <!-- <input
                 type="text"
                 class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px]"
@@ -362,12 +320,9 @@
                   type="checkbox"
                   id="department"
                   name="department"
-                  class="absolute opacity-0 pointer-events-none left-[-1000px] peer"
+                  class="formCheckboxStyle peer"
                 />
-                <label
-                  for="department"
-                  class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px] inline-block w-full relative"
-                >
+                <label for="department" class="formLabelCheckboxStyle">
                   <span
                     class="text-[14px] leading-[28px] tracking-[0.2px] text-[#737373] font-normal"
                     >Please Select</span
@@ -375,10 +330,10 @@
                 </label>
                 <ion-icon
                   name="arrow-down-outline"
-                  class="absolute top-[50%] translate-y-[-50%] right-[6px] pointer-events-none transition-all peer-checked:rotate-180"
+                  class="formIconCheckboxStyle peer-checked:rotate-180"
                 ></ion-icon>
                 <div
-                  class="absolute z-10 bg-[#F9F9F9] pointer-events-none opacity-0 w-full top-[110%] rounded-md transition-all peer-checked:opacity-100 peer-checked:pointer-events-auto"
+                  class="formWrapOptionDropdownStyle z-10 peer-checked:opacity-100 peer-checked:pointer-events-auto"
                 >
                   <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
                     <a href="#">Option A</a>
@@ -395,11 +350,7 @@
             <!-- End Pulldown Department -->
             <!-- Pulldown Time -->
             <div class="mb-10">
-              <p
-                class="text-[14px] leading-[24px] text-[#252B42] font-semibold tracking-[0.2px] capitalize mb-[10px] dark:text-[#fbfbfb]"
-              >
-                Time*
-              </p>
+              <p class="formTitleFieldStyle">Time*</p>
               <!-- <input
                   type="text"
                   class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px]"
@@ -412,10 +363,7 @@
                   name="time"
                   class="absolute z-10 opacity-0 pointer-events-none left-[-1000px] peer"
                 />
-                <label
-                  for="time"
-                  class="bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-[21px] py-[11px] inline-block w-full relative"
-                >
+                <label for="time" class="formLabelCheckboxStyle">
                   <span
                     class="text-[14px] leading-[28px] tracking-[0.2px] text-[#737373] font-normal"
                     >4:00 Available</span
@@ -423,10 +371,10 @@
                 </label>
                 <ion-icon
                   name="arrow-down-outline"
-                  class="absolute top-[50%] translate-y-[-50%] right-[6px] pointer-events-none transition-all peer-checked:rotate-180"
+                  class="formIconCheckboxStyle peer-checked:rotate-180"
                 ></ion-icon>
                 <div
-                  class="absolute bg-[#F9F9F9] pointer-events-none opacity-0 w-full top-[110%] rounded-md transition-all peer-checked:opacity-100 peer-checked:pointer-events-auto"
+                  class="formWrapOptionDropdownStyle peer-checked:opacity-100 peer-checked:pointer-events-auto"
                 >
                   <div class="p-[10px] hover:bg-[#c2c2c2] cursor-pointer">
                     <a href="#">Option A</a>
@@ -949,12 +897,10 @@
               .querySelector(".header-inputSearch-wrap")
               .contains(e.target)
           ) {
-            console.log("1");
             document
               .querySelector(".header-inputSearch")
               .classList.add("opacity-100", "pointer-events-auto");
           } else {
-            console.log("2");
             document
               .querySelector(".header-inputSearch")
               .classList.remove("opacity-100", "pointer-events-auto");
